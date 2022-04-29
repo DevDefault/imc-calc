@@ -1,0 +1,47 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #282a36;
+    color: #ff79c6;
+}
+
+.card {
+    text-align: center;
+    background-color: #44475a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.headerTitle {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.containerInput {
+    margin: 15px
+}
+
+.containerInput input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.buttonCalculate {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff79c6;
+    transition: transform 0.5s;
+}
+
+.buttonCalculate:hover {
+    transform: scale(1.2);
+}
+
+.containerResult {
+    margin-top: 10px;
+}
