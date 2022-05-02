@@ -6,18 +6,27 @@ function App() {
     const [UserHeight, setUserHeight] = useState("");
     const [UserWeight, setUserWeight] = useState("");
     const [result, setResult] = useState("");
-    const [classification, setClassification] = useState('')
+    const [classification, setClassification] = useState("");
 
     function handleCalc() {
         setResult(UserWeight / (UserHeight * UserHeight));
         console.log(result);
+
+        if (result < 18.5) {
+            setClassification("em estágio da magreza");
+        }
+        if (result < 24.9 && result > 18.5) {
+            setClassification("estágio normal");
+        }
+        if (result < 30 && result > 24.9) {
+            setClassification("acima do seu peso ideal");
+        }
+        if (result > 30) {
+            setClassification("em estágiode obesidade, atenção!");
+        }
     }
 
     let resultContainer;
-
-    if (result < 18.5) {
-       console.log(result)
-    }
 
     if (result > 0) {
         resultContainer = (
